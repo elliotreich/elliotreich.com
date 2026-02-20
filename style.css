@@ -158,6 +158,16 @@ hr {
 
 /* ===== Contact ===== */
 
+.twitter-bird {
+    width: 13px;
+    height: 13px;
+    fill: currentColor;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    margin-right: 2px;
+}
+
 #contact p {
     margin-bottom: 0;
 }
