@@ -1,23 +1,8 @@
-# elliotreich.com — Personal Infrastructure Roadmap
+# elliotreich.com — Portfolio Roadmap
 
-**See master docs:** `/Users/elliot.reich/Local Codebase/CLAUDE.md` for the unified memory system. All completed stages are summarized there so every agent understands what infrastructure already exists.
+**Infrastructure docs:** See `../infrastructure/CLAUDE.md` for full architecture, VPS, WireGuard, and print-server details.
 
 ---
-
-## Architecture snapshot
-```
-Internet → Cloudflare (DNS/CDN/Pages) → VPS (Caddy reverse proxy + WireGuard server) →[encrypted tunnel]→ Raspberry Pi (local services)
-```
-- VPS: Spaceship.com VM (209.74.71.160) handles the WireGuard hub, Caddy routing (print.elliotreich.com), and exposes the public Tunnel endpoint.
-- Raspberry Pi Zero 2 W runs Pi-hole (Docker), dnscrypt-proxy, and CUPS, and reaches the VPS over WireGuard (10.0.0.2 → 10.0.0.1).
-- Cloudflare hosts `elliotreich.com` via Pages (CNAME to elliotreich-com.pages.dev) and proxies the domain; `print.elliotreich.com` is an A record to the VPS (Caddy reverse-proxied to CUPS).
-- SSH keys: `~/.ssh/id_ed25519_new` works on both Pi and VPS; `ssh vps` and `ssh admin@pi.local` aliases exist.
-
-## Completed work (moved to CLAUDE memory)
-- Stages 1–4 (Pi setup, VPS setup, WireGuard tunnel, domain routing, SSL, print-server testing) fully operational. All infrastructure updates in `CLAUDE.md`.
-- Stage 5 initial portfolio: live on Cloudflare Pages with contact links, auto-deploy, placeholder content (bio, gallery).
-- Mac dev environment cleanup complete (Homebrew-only, python@3.14, SSH hygiene finalized).
-- **Important note:** elliotreich-work/ draft CSS has drifted from the published site’s style guide (wrong fonts, background color). Content should be drafted using published site’s CSS before being copied over.
 
 ## Current actionable items
 
