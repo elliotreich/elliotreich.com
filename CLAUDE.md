@@ -1,5 +1,7 @@
 # elliotreich.com — Personal Portfolio Website
 
+**Global Context:** See `../elliotreich-private/CHIEF_OF_STAFF.md` for private cross-project priorities.
+
 ## What This Is
 
 Published personal portfolio website hosted on Cloudflare Pages. Static HTML/CSS site showcasing professional background (media, technology, policy), NYC street photography, and links to other projects.
