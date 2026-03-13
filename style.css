@@ -137,6 +137,25 @@ hr {
     margin: 3rem 0;
 }
 
+/* ===== Gallery ===== */
+
+.gallery {
+    columns: 2;
+    column-gap: 8px;
+    margin: 0 -48px;
+}
+
+.photo {
+    break-inside: avoid;
+    margin-bottom: 8px;
+}
+
+.photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* ===== Projects ===== */
 
 .project {
@@ -218,5 +237,10 @@ footer {
 
     h1 {
         font-size: 24px;
+    }
+
+    .gallery {
+        columns: 1;
+        margin: 0;
     }
 }
